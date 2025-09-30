@@ -38,12 +38,25 @@
 - Configurar timestamps automáticos
 - Definir validações básicas nos campos
 
-### 2.2 Entidade Game (Jogo)
+### 2.2 Entidade Game (Jogo)✅
 
-- Criar classe Game com todas as propriedades
-- Definir colunas: id, title, description, price, developer, publisher, releaseDate, ageRating, coverImage, trailerUrl, isActive, stock, createdAt, updatedAt
-- Configurar tipos apropriados (decimal para preço, text para descrição)
-- Configurar campos opcionais onde necessário
+- Criar a classe **Game** com todas as propriedades
+- Definir as colunas:
+  - **id**✅
+  - **título**✅
+  - **descrição**✅
+  - **preço**✅
+  - **desenvolvedor**✅
+  - **publicadora**✅
+  - **data de lançamento**✅
+  - **classificação indicativa**✅
+  - **URL do trailer**✅
+  - **ativo**✅
+  - **estoque**✅
+  - **data de criação**✅
+  - **data de atualização**✅
+- Configurar os tipos apropriados (**decimal para preço, text para descrição**)✅
+- Configurar os campos opcionais quando necessário
 
 ### 2.3 Entidades de Apoio
 

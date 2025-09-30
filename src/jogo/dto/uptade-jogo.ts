@@ -1,5 +1,5 @@
 import { PartialType } from '@nestjs/mapped-types';
-import { CreateUsuarioDto } from './create-usuario.dto';
+import { CreateJogosDto } from './create-jogo.dto';
 
-export class UpdateUsuarioDto extends PartialType(CreateUsuarioDto) {}
+export class UpdateJogosDto extends PartialType(CreateJogosDto) {}
 // PartialType - usado para chamar apenas uma seção da Create (apenas quando for chamado)
