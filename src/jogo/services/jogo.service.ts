@@ -3,6 +3,7 @@ import { InjectRepository } from '@nestjs/typeorm';
 import { ILike, Repository } from 'typeorm';
 import { DeleteResult } from 'typeorm/browser';
 import { CreateJogosDto } from './../dto/create-jogo.dto';
+import { UpdateJogosDto } from './../dto/uptade-jogo';
 import { Jogo } from './../entities/jogo.entity';
 
 @Injectable()
@@ -68,10 +69,11 @@ export class JogoService {
     return await this.jogoRepository.save(createJogosDto);
   }
 
-  async update(jogo: Jogo): Promise<Jogo> {
-    await this.findById(jogo.id);
+  async update(id: number, updateJogosDto: UpdateJogosDto): Promise<Jogo> {
+    const jogo = await this.findById(id);
 
-    return await this.jogoRepository.save(jogo);
+    Object.assign(jogo, updateJogosDto);
+    return this.jogoRepository.save(jogo);
   }
 
   async delete(id: number): Promise<DeleteResult> {
