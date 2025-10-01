@@ -1,9 +1,9 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { JogoModule } from '../src/jogo/';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { UsuarioService } from './usuario/usuario.service';
-import { JogoModule } from './jogo/jogo.module';
 
 @Module({
   imports: [
