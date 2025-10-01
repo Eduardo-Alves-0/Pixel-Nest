@@ -1,7 +1,15 @@
-import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
+import {
+  Column,
+  Entity,
+  OneToMany,
+  OneToOne,
+  PrimaryGeneratedColumn,
+} from 'typeorm';
+import { Genero } from '../../genero/entities/genero.entity';
+import { Plataforma } from '../../plataforma/entities/plataforma.entity';
 
 @Entity('tb_jogos')
-export class Jogos {
+export class Jogo {
   // ID do jogo - chave primária autoincrement
   @PrimaryGeneratedColumn()
   id: number;
@@ -32,7 +40,7 @@ export class Jogos {
 
   // Classificação indicativa do jogo (ex: 10, 12, 18)
   @Column()
-  classificacaoIndicada: number;
+  classificacao: number;
 
   // URL do trailer do jogo
   @Column({ length: 5000 })
@@ -53,4 +61,14 @@ export class Jogos {
   // Data da última atualização do registro
   @Column()
   ultimaAtualizacao: Date;
+
+  @OneToOne(() => Genero, (genero) => genero.jogo, {
+    onDelete: 'DEFAULT',
+  })
+  genero: Genero;
+
+  @OneToMany(() => Plataforma, (plataforma) => plataforma.jogo, {
+    onDelete: 'DEFAULT',
+  })
+  plataforma: Plataforma;
 }

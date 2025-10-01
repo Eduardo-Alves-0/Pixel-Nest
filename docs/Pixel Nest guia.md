@@ -58,12 +58,12 @@
 - Configurar os tipos apropriados (**decimal para preço, text para descrição**)✅
 - Configurar os campos opcionais quando necessário
 
-### 2.3 Entidades de Apoio
+### 2.3 Entidades de Apoio✅
 
-- Criar entidade Genre (id, name, description)
-- Criar entidade Platform (id, name)
-- Criar tabelas de relacionamento GameGenre e GamePlatform
-- Configurar relacionamentos many-to-many entre Game-Genre e Game-Platform
+- Criar entidade **Gênero** (`id`, `nome`, `descrição`)
+- Criar entidade **Plataforma** (`id`, `nome`)
+- Criar tabelas de relacionamento **JogoGênero** e **JogoPlataforma**
+- Configurar relacionamentos _many-to-many_ entre **Jogo - Gênero** e **Jogo - Plataforma**
 
 ### 2.4 Entidades do Sistema de Compras
 
